@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".YieldOverview">
+
+    <!--    header -->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appLayout"
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:titleTextColor="@color/white"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="YIELD OVERVIEW" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--  screen content-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="?attr/actionBarSize"
+            android:layout_marginHorizontal="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rlDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMonthYR"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="April 2023"
+                    android:textAllCaps="false"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:textColor="@color/primaryTextColor"
+                    app:cornerRadius="0dp"
+                    android:textSize="16dp"
+                    app:strokeColor="@color/primaryDarkColor" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgMushroomIcon"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_below="@id/rlDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/misty_logo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgMushroomIcon"
+                android:background="@drawable/menu_large_rectangle">
+
+                <TextView
+                    android:id="@+id/txtTotalHarvest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="5dp"
+                    android:text="Total Harvest"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlBiologicalEfficiency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTotalHarvest"
+                    android:layout_centerHorizontal="true"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:id="@+id/txtBiologicalEfficiency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Biological Efficiency = "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txtBEValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txtBiologicalEfficiency"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="100.03 %"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlBiologicalEfficiency" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

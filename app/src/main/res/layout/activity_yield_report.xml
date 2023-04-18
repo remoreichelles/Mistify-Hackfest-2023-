@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".YieldReport">
+
+    <!--    header -->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appLayout"
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="YIELD REPORTS"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--  screen content-->
+
+
+        <RelativeLayout
+            android:id="@+id/rl_mainContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/txt_batchNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Batch 1"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="25dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txt_batchNo">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_yieldOverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:background="@drawable/corner_border">
+
+
+                        <ImageView
+                            android:id="@+id/img_bar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"
+                            android:src="@drawable/img_yp_bar" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/img_bar"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingVertical="25dp"
+                            android:text="@string/yieldOverview"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:cornerRadius="15dp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mushroomDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_yieldOverview"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/corner_border">
+
+                        <ImageView
+                            android:id="@+id/img_mushroomMonitoring"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"
+                            android:src="@drawable/img_yp_mushroom" />
+
+                        <TextView
+                            android:id="@+id/btn_mushroomMonitoring"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/img_mushroomMonitoring"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingVertical="25dp"
+                            android:text="Mushroom Details"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:cornerRadius="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dailyHarvest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_mushroomDetails"
+                        android:layout_marginVertical="20dp"
+                        android:background="@drawable/corner_border">
+
+                        <ImageView
+                            android:id="@+id/img_dailyMushroom"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"
+                            android:src="@drawable/img_daily_harvest" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/img_dailyMushroom"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingVertical="25dp"
+                            android:text="Daily Harvest"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:cornerRadius="15dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/fbAddYield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Add Yield"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

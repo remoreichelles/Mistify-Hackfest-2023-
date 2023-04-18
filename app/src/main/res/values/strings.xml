@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Mistify</string>
+
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="email">Email</string>
+
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="waterLvl">Water Level</string>
+    <string name="dailyActivity">Daily Activity</string>
+    <string name="yieldReport">Yield Reports</string>
+
+
+    <string name="openNavDrawer">Open Navigation Drawer</string>
+    <string name="closeNavDrawer">Close Navigation Drawer</string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="yieldOverview">Yield Overview</string>
+    <string name="mushroomMonitoring">Mushroom Monitoring</string>
+    <string name="biologicalEfficiency">Biological Efficiency</string>
+</resources>
